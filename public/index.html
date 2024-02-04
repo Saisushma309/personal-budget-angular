@@ -188,7 +188,7 @@
         }
 
         function getBudget() {
-            axios.get('/budget')
+            axios.get('http://localhost:3000/budget')
             .then(function (res) {
                 console.log(res.data);
                 for (var i = 0; i < res.data.myBudget.length; i++) {
@@ -241,7 +241,7 @@
             .domain([])
             .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
 
-        axios.get('/budget').then(res => {
+        axios.get('http://localhost:3000/budget').then(res => {
             console.log(res);
             var data = res.data.myBudget.map(obj => {
                 return {label: obj.title, value: obj.budget}
