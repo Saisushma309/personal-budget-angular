@@ -24,8 +24,8 @@ export class DataService {
         ],
         labels: [],
     };;
-    
-    constructor(private http: HttpClient) { 
+
+    constructor(private http: HttpClient) {
         this.getData();
     }
 
@@ -45,3 +45,5 @@ export class DataService {
             }
     }
 }
+
+
